@@ -1,12 +1,6 @@
-import mysql.connector
+import streamlit as st
 
 def get_connection():
-
-    conn = mysql.connector.connect(
-        host="127.0.0.1",
-        user="root",
-        password="myownserver",
-        database="ailo"
-    )
-
+    # Connects to Aiven using your Streamlit Cloud secrets
+    conn = st.connection('mysql', type='sql').driver_connection
     return conn
