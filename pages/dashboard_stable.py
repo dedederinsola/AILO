@@ -4,7 +4,7 @@ import requests
 from services.time_service import get_local_time
 from services.news_service import fetch_daily_news
 from connstr import get_connection
-conn = st.connection('mysql', type='sql').driver_connection
+conn = get_connection()
 cursor = conn.cursor(dictionary=True)
 
 # ----------------------------
