@@ -3,7 +3,7 @@ import mysql.connector
 from datetime import date
 from connstr import get_connection
 
-conn = st.connection('mysql', type='sql').driver_connection
+conn = get_connection()
 cursor = conn.cursor(dictionary=True)
 
 st.set_page_config(layout="wide")
