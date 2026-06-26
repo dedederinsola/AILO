@@ -5,7 +5,7 @@ from connstr import get_connection
 
 import streamlit as st
 
-conn = st.connection('mysql', type='sql').driver_connection
+conn = get_connection()
 cursor = conn.cursor(dictionary=True)
 
 
