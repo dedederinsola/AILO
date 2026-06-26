@@ -20,7 +20,7 @@ def get_connection():
     )
     return conn
 
-conn = st.connection('mysql', type='sql').driver_connection
+conn = get_connection()
 cursor = conn.cursor(dictionary=True)
 
 SOURCES = {
